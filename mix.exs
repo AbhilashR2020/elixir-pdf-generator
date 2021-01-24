@@ -9,7 +9,6 @@ defmodule PdfGenerator.Mixfile do
       elixir: ">= 1.1.0",
       deps: deps(),
       description: description(),
-      package: package(),
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod
     ]
@@ -30,17 +29,6 @@ defmodule PdfGenerator.Mixfile do
     A wrapper for wkhtmltopdf and chrome-headless(puppeteer) with optional
     support for encryption via pdftk.
     """
-  end
-
-  defp package do
-    [
-     files: ["lib", "mix.exs", "README.md", "LICENSE", "test", "priv"],
-     maintainers: ["Martin Gutsch"],
-     licenses: ["MIT"],
-     links: %{
-        "GitHub" => "https://github.com/gutschilla/elixir-pdf-generator"
-      }
-     ]
   end
 
   defp deps do
